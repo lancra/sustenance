@@ -25,13 +25,26 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7817BA57
 		tests\xunit.runner.json = tests\xunit.runner.json
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{D83B1C47-5FDA-4C98-8708-CE60C1A319E7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sustenance.Dev", "tools\Dev\Sustenance.Dev.csproj", "{F6FFF303-23C2-4D07-AFBD-2EE87657A490}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6FFF303-23C2-4D07-AFBD-2EE87657A490}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6FFF303-23C2-4D07-AFBD-2EE87657A490}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6FFF303-23C2-4D07-AFBD-2EE87657A490}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6FFF303-23C2-4D07-AFBD-2EE87657A490}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F6FFF303-23C2-4D07-AFBD-2EE87657A490} = {D83B1C47-5FDA-4C98-8708-CE60C1A319E7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5311B8B1-FDA4-4596-A8E8-CEE858B94C59}
