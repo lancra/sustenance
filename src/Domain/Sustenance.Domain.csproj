@@ -1,0 +1,7 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <StaticAnalysisCodeType>ProdLib</StaticAnalysisCodeType>
+  </PropertyGroup>
+
+</Project>
