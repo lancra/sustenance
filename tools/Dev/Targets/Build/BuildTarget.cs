@@ -6,5 +6,5 @@ internal sealed class BuildTarget : ITarget
         => targets.Add(
             BuildTargets.Build,
             "Executes the complete build process.",
-            dependsOn: [BuildTargets.Publish]);
+            dependsOn: [BuildTargets.Publish, BuildTargets.Test]);
 }
