@@ -8,7 +8,13 @@
   <ItemGroup>
     <PackageReference Include="Autofac" />
     <PackageReference Include="Bullseye" />
+    <PackageReference Include="JsonSchema.Net" />
     <PackageReference Include="SimpleExec" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Lint/linters.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="Lint/linters.schema.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
 </Project>

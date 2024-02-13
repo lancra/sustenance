@@ -1,0 +1,106 @@
+{
+  "$schema": "./linters.schema.json",
+  "packageManagers": [
+    {
+      "name": "brew",
+      "url": "https://brew.sh",
+      "source": "Homebrew",
+      "install": "install {0}",
+      "platforms": ["Linux", "MacOS"]
+    },
+    {
+      "name": "cargo",
+      "url": "https://rustup.rs",
+      "source": "Rust",
+      "install": "install {0}",
+      "platforms": ["Linux", "MacOS", "Windows"]
+    },
+    {
+      "name": "go",
+      "url": "https://golang.org",
+      "install": "install {0}",
+      "platforms": ["Linux", "MacOS", "Windows"]
+    },
+    {
+      "name": "npm",
+      "url": "https://nodejs.org",
+      "source": "Node.js",
+      "install": "install --location=global {0}",
+      "platforms": ["Linux", "MacOS", "Windows"]
+    },
+    {
+      "name": "pip",
+      "url": "https://python.org",
+      "source": "Python",
+      "install": "install {0}",
+      "platforms": ["Linux", "MacOS", "Windows"]
+    },
+    {
+      "name": "winget",
+      "url": "https://aka.ms/getwinget",
+      "source": "App Installer",
+      "install": "install --id {0} --exact",
+      "platforms": ["Windows"]
+    }
+  ],
+  "linters": [
+    {
+      "name": "markdownlint",
+      "url": "https://github.com/igorshubovych/markdownlint-cli",
+      "check": ".",
+      "packages": [
+        {
+          "name": "markdownlint-cli",
+          "source": "npm"
+        },
+        {
+          "name": "markdownlint-cli",
+          "source": "brew"
+        }
+      ]
+    },
+    {
+      "name": "prettier",
+      "url": "https://prettier.io",
+      "check": "--check .",
+      "fix": "--write .",
+      "packages": [
+        {
+          "name": "prettier",
+          "source": "npm"
+        }
+      ]
+    },
+    {
+      "name": "typos",
+      "url": "https://github.com/crate-ci/typos",
+      "check": ".",
+      "fix": "--write-changes .",
+      "packages": [
+        {
+          "name": "typos-cli",
+          "source": "cargo"
+        },
+        {
+          "name": "typos-cli",
+          "source": "brew"
+        }
+      ]
+    },
+    {
+      "name": "yamllint",
+      "url": "https://github.com/adrienverge/yamllint",
+      "check": "--strict .",
+      "packages": [
+        {
+          "name": "yamllint",
+          "source": "pip"
+        },
+        {
+          "name": "yamllint",
+          "source": "brew"
+        }
+      ]
+    }
+  ]
+}
