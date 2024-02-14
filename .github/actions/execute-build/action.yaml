@@ -1,0 +1,10 @@
+name: Execute Build
+description: Executes the build process, including any setup steps.
+runs:
+  using: composite
+  steps:
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+    - name: Build
+      shell: bash
+      run: ./dev.sh build
