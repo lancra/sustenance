@@ -1,0 +1,6 @@
+@Sustenance.Api_HostAddress = http://localhost:5120
+
+GET {{Sustenance.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

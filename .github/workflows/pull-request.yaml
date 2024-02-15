@@ -1,0 +1,25 @@
+name: Pull Request
+on:
+  pull_request:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v4
+      - name: Execute Build
+        uses: ./.github/actions/execute-build
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+      - name: Install Linters
+        shell: bash
+        run: ./dev.sh install
+      - name: Lint
+        shell: bash
+        run: ./dev.sh lint
